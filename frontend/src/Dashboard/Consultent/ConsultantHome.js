@@ -2,14 +2,15 @@ import React from "react";
 import Sidebar from "../Components/MyComponent";
 import ConsultantSidebar from "./ConsultantSidebar";
 import "../Style/Consultant.css";
+import ConsultantTopbar from "./ConsultantTopbar";
 
 export default function ConsultantHome() {
     return (
         <div className="dash">
             <div className="page">
-                {/*<div className='top'>*/}
-                {/*    <TopBar/>*/}
-                {/*</div>*/}
+                <div className='top'>
+                    <ConsultantTopbar/>
+                </div>
                 <div className='main'>
                     <div className='side-bar'>
                         <ConsultantSidebar/>

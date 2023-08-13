@@ -40,75 +40,79 @@ body{
 }
 
 .top{
-    grid-template-rows: 82rem;
+    grid-template-rows: 1rem;
+    width: 100vw;
+    height: 2rem;
 }
 
 .main{
     display: grid;
-    gap: 16px;
+    gap: 14px;
     grid-template-columns: 15.8rem auto;
     overflow: hidden;
     align-items: stretch;
+    margin-top: -102px;
 }
 
-/*topnav*/
+/*!*topnav*!*/
 
-.top-nav {
-    display: flex;
-    align-items: center;
-    padding: 1.2rem 2rem;
-    border-radius: 2rem 2rem 0 0;
-    list-style: none;
-    background-color: var(--glass);
-}
+/*.top-nav {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    padding: 1.2rem 2rem;*/
+/*    border-radius: 2rem 2rem 0 0;*/
+/*    list-style: none;*/
+/*    background-color: var(--glass);*/
+/*    box-shadow: var(--boxShadow);*/
+/*}*/
 
-.top-nav .profile {
-    cursor: pointer;
-    color: var(--black);
-    position: absolute;
-    right: 3.5rem;
-}
+/*.top-nav .profile {*/
+/*    cursor: pointer;*/
+/*    color: var(--black);*/
+/*    position: absolute;*/
+/*    right: 3.5rem;*/
+/*}*/
 
-.profile:hover {
-    color: var(--activeItem);
-}
+/*.profile:hover {*/
+/*    color: var(--activeItem);*/
+/*}*/
 
-.Heading {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--black);
-    text-align: left;
-}
+/*.Heading {*/
+/*    font-size: 1.5rem;*/
+/*    font-weight: 600;*/
+/*    color: var(--black);*/
+/*    text-align: left;*/
+/*}*/
 
-.drop {
-    position: absolute;
-    top: 5em;
-    right: 3.5em;
-    width: 10%;
-    height: 16%;
-    opacity: 5;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    background-color: var(--glass);
-    border-radius: 0.7rem 0 0.7rem 0.7rem;
-}
+/*.drop {*/
+/*    position: absolute;*/
+/*    top: 5em;*/
+/*    right: 3.5em;*/
+/*    width: 10%;*/
+/*    height: 16%;*/
+/*    opacity: 5;*/
+/*    pointer-events: none;*/
+/*    transition: all 0.3s ease;*/
+/*    background-color: var(--glass);*/
+/*    border-radius: 0.7rem 0 0.7rem 0.7rem;*/
+/*}*/
 
-.empty {
-    display: none;
-}
+/*.empty {*/
+/*    display: none;*/
+/*}*/
 
-.drop-list span{
-    display: flex;
-    text-align: left;
-    margin: 21px 20px;
-    gap: 15px;
-    font-weight: 600;
-    cursor: pointer !important;
-}
+/*.drop-list span{*/
+/*    display: flex;*/
+/*    text-align: left;*/
+/*    margin: 21px 20px;*/
+/*    gap: 15px;*/
+/*    font-weight: 600;*/
+/*    cursor: pointer !important;*/
+/*}*/
 
-.drop-list span.hover{
-    background-color: var(--activeItem);
-}
+/*.drop-list span.hover{*/
+/*    background-color: var(--activeItem);*/
+/*}*/
 
 /*!*SIDEBAR*!*/
 

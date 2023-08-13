@@ -6,7 +6,7 @@ body{
 }
 
 #Csidebar{
-    height: 100vh;
+    height: 90.5vh;
     width: 250px;
     background: #2f323a;
     transition: all 500ms linear;
@@ -61,6 +61,68 @@ body{
 
 }
 
+/*topnav*/
+
+.top-nav {
+    margin-top: -140px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 1rem 2.5rem;
+    list-style: none;
+    background-color: #2f323a;
+    box-shadow: var(--boxShadow);
+}
+
+.top-nav .profile {
+    cursor: pointer;
+    color: white;
+    /*position: absolute;*/
+    /*right: 3.5rem;*/
+}
+
+.profile:hover {
+    color: white;
+}
+
+.Heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-align: left;
+}
+
+.drop {
+    position: absolute;
+    top: 5em;
+    right: 2.5em;
+    width: 15%;
+    height: 16%;
+    opacity: 5;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background-color: #2f323a;
+    border-radius: 0.7rem 0 0.7rem 0.7rem;
+}
+
+.empty {
+    display: none;
+}
+
+.drop-list span{
+    display: flex;
+    text-align: left;
+    margin: 21px 20px;
+    gap: 15px;
+    font-weight: 600;
+    cursor: pointer !important;
+}
+
+.drop-list span.hover{
+    background-color: var(--activeItem);
+}
 
 
 
