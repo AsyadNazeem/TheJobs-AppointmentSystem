@@ -8,30 +8,30 @@ export const items = [
     },
 
     {
-        title: "Products",
-        icon: "bi bi-bag",
-        path: "/productsStruct"
+        title: "Appointments",
+        icon: "bi bi-calendar-week",
+        path: "/jsappointments"
     },
     {
-        title: "Orders",
-        icon: "bi bi-cart",
+        title: "OnGoing Appointments",
+        icon: "bi bi-calendar-date",
+        path: "/ongoingappointment"
+    },
+    {
+        title: "Details",
+        icon: "bi bi-card-text",
         path: "/jsdetails"
     },
-    {
-        title: "Customers",
-        icon: "bi bi-people",
-        path: "/cuxStructs"
-    },
-    {
-        title: "Reports",
-        icon: "bi bi-pie-chart",
-        path: "/reportsStruct"
-    },
-    {
-        title: "Register",
-        icon: "bi bi-file-text",
-        path: "/adminStruct"
-    },
+    // {
+    //     title: "Reports",
+    //     icon: "bi bi-pie-chart",
+    //     path: "/reportsStruct"
+    // },
+    // {
+    //     title: "Register",
+    //     icon: "bi bi-file-text",
+    //     path: "/adminStruct"
+    // },
     {
         title: "Logout",
         icon: "bi bi-box-arrow-right",
@@ -49,12 +49,12 @@ export const ConsultantSidebarData = [
     {
         title: "Appointments",
         icon: "bi bi-calendar-check",
-        link: "/consultantAppointments"
+        link: "/consultantappointments"
     },
     {
         title: "Details",
         icon: "bi bi-person",
-        link: "/consultantDetails"
+        link: "/consultantdetails"
     },
     {
         title: "Logout",

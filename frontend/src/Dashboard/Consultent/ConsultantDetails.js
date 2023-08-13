@@ -1,10 +1,8 @@
 import React from "react";
-import TopBar from "./TopBar";
-import '../Style/JobSeeker.css'
-import Sidebar from "../JobSeeker/Sidebar";
+import TopBar from "../Consultent/ConsultantTopbar";
+import Sidebar from "../Consultent/ConsultantSidebar";
 
-
-export default function JobSeekerHome() {
+export default function ConsultantDetails() {
     return (
         <div className="dash">
             <div className="page">
@@ -20,7 +18,7 @@ export default function JobSeekerHome() {
                             <div className="col-md-12">
                                 <div className="card mt-4">
                                     <div className="card-body">
-                                        <h1 className="text-center">Welcome to Job Seeker Dashboard</h1>
+                                        <h1 className="text-center">Details</h1>
                                     </div>
                                 </div>
                             </div>
