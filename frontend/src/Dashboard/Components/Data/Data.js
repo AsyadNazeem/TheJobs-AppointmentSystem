@@ -1,11 +1,6 @@
 import React from "react";
 
 export const items = [
-    // {
-    //     icon1: "bi bi-list",
-    //     icon2: "bi bi-x-lg",
-    //     className : "sidebar-icon-open"
-    // },
     {
         title: "Dashboard",
         icon: "bi bi-speedometer",
@@ -15,18 +10,7 @@ export const items = [
     {
         title: "Products",
         icon: "bi bi-bag",
-        children: [
-            {
-                title: "Our Products",
-                icon: "bi bi-bag-check",
-                path: "/productsStruct"
-            },
-            {
-                title: "Add Product",
-                icon: "bi bi-bag-plus",
-                path: "/productsStruct"
-            }
-        ]
+        path: "/productsStruct"
     },
     {
         title: "Orders",
@@ -46,18 +30,7 @@ export const items = [
     {
         title: "Register",
         icon: "bi bi-file-text",
-        children: [
-            {
-                title: "Admins",
-                icon: "bi bi-person",
-                path: "/adminStruct"
-            },
-            {
-                title: "Add Admin",
-                icon: "bi bi-person-add",
-                path: "/Signup"
-            }
-        ]
+        path: "/adminStruct"
     },
     {
         title: "Logout",

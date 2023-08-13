@@ -7,7 +7,7 @@ export default function TopBar() {
     return (
         <div>
             <ul className='top-nav'>
-                <li className='Heading'>Mubarak <br/>Enterprises</li>
+                <li className='Heading'>JobSeeker</li>
                 <h1 className="bi bi-person-circle profile" onClick={() => setOpen(!open)}></h1>
                 <div className={open ? "drop" : "empty"}>
                     <div className="drop-list">

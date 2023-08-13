@@ -1,17 +1,17 @@
 import React from "react";
-import Sidebar from "../Components/MyComponent";
 import TopBar from "./TopBar";
 import '../Style/JobSeeker.css'
 import {items} from "../Components/Data/Data";
+import Sidebar from "../JobSeeker/Sidebar";
 
 
 export default function JobSeekerHome() {
     return (
         <div className="dash">
             <div className="page">
-                {/*<div className='top'>*/}
-                {/*    <TopBar/>*/}
-                {/*</div>*/}
+                <div className='top'>
+                    <TopBar/>
+                </div>
                 <div className='main'>
                     <div className='side-bar'>
                         <Sidebar/>
