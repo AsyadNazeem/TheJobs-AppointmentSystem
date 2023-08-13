@@ -31,19 +31,21 @@ app.post("/checkEmailExists", (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    const { email, password, userType } = req.body;
-    Users.findOne({ email: email }).then((user) => {
+    const {email, password, userType} = req.body;
+    Users.findOne({email: email}).then((user) => {
         if (user) {
             if (user.password === password && user.userType === userType) {
-                res.json({ message: "Login Success" });
-            } else {
+                res.json({message: "Login Success"});
+            } else if (user.password === password && user.userType === userType) {
+                res.json({message: "Login Success"});
+            }else {
                 // Incorrect password or user type
-                res.status(401).json({ message: "Incorrect Password or User Type" });
+                res.status(401).json({message: "Incorrect Password or User Type"});
                 console.log("Incorrect Password or User Type");
             }
         } else {
             // User not found
-            res.status(401).json({ message: "User not found" });
+            res.status(401).json({message: "User not found"});
             console.log("User not found");
         }
     });

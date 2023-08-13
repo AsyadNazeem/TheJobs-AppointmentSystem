@@ -1,0 +1,286 @@
+:root {
+    --yellow: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%);
+    --orange: #fca61f;
+    --black: #000000;
+    --gray: #788097;
+    --purple: linear-gradient(180deg, #BB67FF 0%, #C484F3 100%);
+    --pink: #FF919D;
+    --glass: rgba(255, 255, 255, 0.54);
+    --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+    --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+    --activeItem: #f799a354;
+}
+
+.dash {
+    /* padding: 0.5rem 3.5rem; */
+    color: var(--black);
+    background: linear-gradient(
+            106.37deg,
+            #ffe1bc 29.63%,
+            #ffcfd1 51.55%,
+            #f3c6f1 90.85%
+    );
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.page{
+    height: 97%;
+    width: 97%;
+    background: var(--glass);
+    border-radius: 2rem;
+}
+
+.top{
+    grid-template-rows: 82rem;
+}
+
+.main{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 18rem auto;
+    overflow: hidden;
+}
+
+/*topnav*/
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    border-radius: 2rem 2rem 0 0;
+    list-style: none;
+    background-color: var(--glass);
+}
+
+.top-nav .profile {
+    cursor: pointer;
+    color: var(--black);
+    position: absolute;
+    right: 3.5rem;
+}
+
+.profile:hover {
+    color: var(--activeItem);
+}
+
+.Heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--black);
+    text-align: left;
+}
+
+.drop {
+    position: absolute;
+    top: 5em;
+    right: 3.5em;
+    width: 10%;
+    height: 16%;
+    opacity: 5;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background-color: var(--glass);
+    border-radius: 0.7rem 0 0.7rem 0.7rem;
+}
+
+.empty {
+    display: none;
+}
+
+.drop-list span{
+    display: flex;
+    text-align: left;
+    margin: 21px 20px;
+    gap: 15px;
+    font-weight: 600;
+    cursor: pointer !important;
+}
+
+.drop-list span.hover{
+    background-color: var(--activeItem);
+}
+
+/*SIDEBAR*/
+
+.sidebar {
+    width: 100%;
+    height: 86.5vh;
+    border-radius: 0 0 0 2rem;
+    transition: all 300ms ease;
+    padding: 1px 0 0 0;
+    z-index: 100;
+    background-color: var(--glass);
+}
+
+.sidebar-item {
+    padding: .75em 1.7rem;
+    display: block;
+    transition: background-color .15s ease-in-out;
+    text-align: left;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+}
+
+.sidebar-item:hover {
+    background-color: var(--activeItem);
+    border-radius: 0.7rem;
+    font-weight: bold;
+}
+
+.sidebar-title {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.sidebar-title h3{
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.sidebar-title span i {
+    display: inline-block;
+    width: 2em;
+}
+
+.sidebar-title .toggle-btn {
+    cursor: pointer;
+    transition: tramsform 0.3s ease;
+}
+
+.sidebar-item.open .sidebar-title .toggle-btn {
+    transform: rotate(180deg);
+}
+
+.sidebar-content {
+    padding: .20em;
+    height: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.sidebar-item.open .sidebar-content {
+    height: auto;
+    transition: height 0.3s ease;
+}
+
+.sidebar-item.plain {
+    font-weight: 500;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar-item.plain i {
+    display: inline-block;
+    width: 2em;
+}
+
+.active{
+    background-color: var(--activeItem);
+    border-radius: 0.7rem;
+    font-weight: bold;
+}
+
+.logout {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.sidebar-item.logout:hover,
+.sidebar-item.logout.hover {
+    width: 17.2%; /* Adjust the width as needed */
+}
+
+@media screen and (max-width: 900px) {
+    .top-nav {
+        display: flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-radius: 2rem 2rem 0 0;
+        list-style: none;
+        background-color: var(--glass);
+    }
+
+    .top-nav .profile {
+        cursor: pointer;
+        color: var(--black);
+        position: absolute;
+        right: 3.5rem;
+    }
+
+    .sidebar {
+        width: 25%;
+        height: 88vh;
+    }
+
+    .sidebar-open {
+        width: 100%;
+        height: 88vh;
+    }
+
+    .sidebar-title h3 {
+        display: none;
+    }
+
+    .sidebar-title-open h3 {
+        display: flex;
+    }
+
+
+    .h3-title {
+        display: none;
+    }
+
+    .h3-title-open {
+        display: flex;
+    }
+
+    .Heading {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--black);
+        text-align: left;
+    }
+
+    .sidebar-title .toggle-btn {
+        cursor: pointer;
+        transition: tramsform 0.3s ease;
+        display: none;
+    }
+
+    .sidebar-content {
+        padding-right: 70px;
+        height: 0;
+        overflow: hidden;
+        cursor: pointer;
+        margin-left: -30px;
+    }
+
+    .sidebar-content .active {
+        width: 70px;
+    }
+
+    .sidebar-item.open .sidebar-content {
+        height: auto;
+        transition: height 0.3s ease;
+    }
+
+    .sidebar-title span i {
+        display: inline-block;
+        width: 2em;
+    }
+
+    .sidebar-icon-open {
+        display: flex;
+    }
+
+}

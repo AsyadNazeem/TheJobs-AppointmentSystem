@@ -1,14 +1,13 @@
 import React, {useState} from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-import Navbar from "./Navbar";
 
-export default function RegisterConsultant() {
+export default function Register() {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-    const [userType, setUserType] = useState("Job Seeker");
+    const [userType, setUserType] = useState("Consultant");
     const [errorMessage, setErrorMessage] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -86,9 +85,6 @@ export default function RegisterConsultant() {
 
     return (
         <div>
-            <div>
-                <Navbar/>
-            </div>
             <div className="register">
                 <div>
                     <h1 className="text-center">Register</h1>

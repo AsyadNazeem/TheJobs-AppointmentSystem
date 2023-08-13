@@ -21,12 +21,14 @@
 
 .Navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--primary-color);
     margin-top: -1px;
     box-shadow: var(--box-shadow);
 }
 
-.navbar-header {
+.navbar-heading {
     font-size: 20px;
     margin-left: 30px;
     font-family: 'Yantramanav', sans-serif;
@@ -77,6 +79,81 @@
     padding: 140px 0 50px 0;
 }
 
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0 50px 0;
+}
+
+.register-form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 40px 80px 40px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+}
+
+.pass-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+    gap: 20px;
+}
+
+.text-box{
+    width: 500px;
+    height: 45px;
+    padding: 10px;
+}
+
+.pass-tex{
+    width: 240px;
+    height: 45px;
+    padding: 10px;
+}
+
+.btn-sub{
+    width: 100px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.login-form{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 10px 80px 10px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0 50px 0;
+}
+
 @media screen and (max-width: 700px) {
     /*.navbar{*/
     /*    margin-bottom: 20px;*/
@@ -89,9 +166,10 @@
         padding: 15px;
     }
 
-    .navbar-header {
+    .navbar-heading {
         font-size: 15px;
-        margin-left: 15px;
+        margin-left: 10px;
+
     }
 
     .nav-links {
@@ -121,7 +199,6 @@
         visibility: visible;
         opacity: 1;
     }
-
 
 
     nav {

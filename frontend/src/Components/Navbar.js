@@ -26,7 +26,7 @@ export default function Navbar() {
         <div>
             <ul className="Navbar">
                 <div>
-                    <h1 className="navbar-header">dev.Asyad</h1>
+                    <h1 className="navbar-heading">TheJobs</h1>
                 </div>
                 <nav ref={navRef} className={`nav-links ${isNavbarOpen ? "responsive_nav" : ""}`}>
                     <NavLink to="/" className="active" onClick={closeNavbar}>
@@ -35,7 +35,7 @@ export default function Navbar() {
                     <NavLink className="Navbar-links" activeClass="active" to="/about" onClick={closeNavbar}>
                         <li className="Navbar-link">About</li>
                     </NavLink>
-                    <NavLink to="/contacts" activeClass="active" onClick={closeNavbar}>
+                    <NavLink to="/contact" activeClass="active" onClick={closeNavbar}>
                         <li className="Navbar-link">Contact</li>
                     </NavLink>
                     <NavLink to="/register" activeClass="active" onClick={closeNavbar}>
