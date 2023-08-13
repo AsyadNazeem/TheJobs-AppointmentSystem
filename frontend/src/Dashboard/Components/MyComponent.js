@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Sidebar from "../JobSeeker/Sidebar";
 import {items, DropDownData} from "./Data/Data.js";
+import ConsultantSidebar from "../Consultent/ConsultantSidebar";
 
 export default function MyComponent() {
     const [open1, setOpen1] = useState(true);

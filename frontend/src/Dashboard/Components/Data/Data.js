@@ -1,4 +1,6 @@
-export const items =[
+import React from "react";
+
+export const items = [
     // {
     //     icon1: "bi bi-list",
     //     icon2: "bi bi-x-lg",
@@ -61,6 +63,30 @@ export const items =[
         title: "Logout",
         icon: "bi bi-box-arrow-right",
         path: "/logout",
+        isLastItem: true
+    }
+];
+
+export const ConsultantSidebarData = [
+    {
+        title: "Dashboard",
+        icon: "bi bi-speedometer",
+        link: "/consultanthome"
+    },
+    {
+        title: "Appointments",
+        icon: "bi bi-calendar-check",
+        link: "/consultantAppointments"
+    },
+    {
+        title: "Details",
+        icon: "bi bi-person",
+        link: "/consultantDetails"
+    },
+    {
+        title: "Logout",
+        icon: "bi bi-box-arrow-right",
+        link: "/logout",
         isLastItem: true
     }
 ];
