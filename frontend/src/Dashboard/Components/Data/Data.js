@@ -47,6 +47,11 @@ export const ConsultantSidebarData = [
         link: "/consultanthome"
     },
     {
+        title: "Add Profile",
+        icon: "bi bi-person-lines-fill",
+        link: "/addprofile"
+    },
+    {
         title: "Appointments",
         icon: "bi bi-calendar-check",
         link: "/consultantappointments"

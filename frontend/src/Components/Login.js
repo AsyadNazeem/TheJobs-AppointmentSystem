@@ -20,7 +20,7 @@ const Login = () => {
 
         setErrorMessage('');
 
-        await axios.post("http://localhost:3001/login", {email, password, userType})
+        await axios.post("http://localhost:3005/login", {email, password, userType})
             .then((response) => {
                 console.log(response);
                 if (response.data.message === "Login Success" && userType === "Job Seeker") {

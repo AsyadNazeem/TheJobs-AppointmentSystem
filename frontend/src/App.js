@@ -15,6 +15,7 @@ import RegisterConsultant from "./Components/register";
 import ConsultantAppointments from "./Dashboard/Consultent/Appointments";
 import ConsultantDetails from "./Dashboard/Consultent/ConsultantDetails";
 import OngoinAppointments from "./Dashboard/JobSeeker/OngoinAppointment";
+import AddProfile from "./Dashboard/Consultent/AddProfile";
 
 function App() {
     return (
@@ -35,6 +36,7 @@ function App() {
                     <Route path="/consultantdetails" element={<ConsultantDetails/>}/>
                     <Route path="/ongoingappointment" element={<OngoinAppointments/>}/>
                     <Route path="/jsappointments" element={<JSAppointments/>}/>
+                    <Route path="/addprofile" element={<AddProfile/>}/>
                 </Route>
             </Routes>
         </div>

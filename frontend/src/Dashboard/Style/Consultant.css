@@ -7,7 +7,7 @@ body{
 
 #Csidebar{
     height: 90.5vh;
-    width: 250px;
+    width: 300px;
     background: #2f323a;
     transition: all 500ms linear;
 }
@@ -125,4 +125,12 @@ body{
 }
 
 
+/*PROFILE*/
 
+.form-group > input {
+    background-color: whitesmoke;
+}
+
+.form-group > textarea {
+    background-color: whitesmoke;
+}

@@ -17,7 +17,7 @@ export default function RegisterConsultant() {
 
     const checkEmailExists = async (email) => {
         try {
-            const response = await axios.post("http://localhost:3001/checkEmailExists", {email});
+            const response = await axios.post("http://localhost:3005/checkEmailExists", {email});
             console.log(response);
 
             if (response.data.message === "Email exists") {
@@ -67,7 +67,7 @@ export default function RegisterConsultant() {
             }
 
             // Register the user
-            const response = await axios.post("http://localhost:3001/register", {
+            const response = await axios.post("http://localhost:3005/register", {
                 username,
                 email,
                 password,
