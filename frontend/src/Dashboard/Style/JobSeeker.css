@@ -183,6 +183,65 @@ body{
 .dash-card{
 }
 
+.js-Card-heading{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--black);
+    text-align: left;
+}
+
+.js-Card-description{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--black);
+    text-align: left;
+}
+
+.js-card-expertise{
+    display: flex;
+}
+
+.js-card-expertise-head{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--black);
+    text-align: left;
+}
+
+.js-card-expertise-dis{
+    font-size: .8rem;
+    margin-left: 15px;
+    font-weight: 500;
+    color: var(--gray);
+    text-align: left;
+}
+
+.js-appointment-date-time{
+    display: flex;
+    justify-content: space-between;
+}
+
+.date{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--black);
+    text-align:left;
+}
+
+.time{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--black);
+    text-align:right;
+}
+
+.js-appointer-designation{
+    font-size:.7rem;
+    font-weight: 500;
+    color: var(--gray);
+    text-align:left;
+}
+
 /*}*/
 
 /*.drop-list span{*/

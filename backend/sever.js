@@ -13,6 +13,54 @@ mongoose.connect(
     "mongodb+srv://asyadnazeem:mustang123@cluster.habrn1v.mongodb.net/Users"
 );
 
+// Add a POST endpoint to handle adding a user profile
+app.post('/addProfile', (req, res) => {
+    const {
+        firstName,
+        lastName,
+        email,
+        phoneNumber,
+        country,
+        state,
+        city,
+        designation,
+        experience,
+        qualification,
+        specialization,
+        about,
+        profilePicture, // This should be handled differently (file upload)
+        resume // This should be handled differently (file upload)
+    } = req.body;
+
+
+    // Create a new Users document using the Users schema
+    const newUser = new Users({
+        firstName,
+        lastName,
+        email,
+        phoneNumber,
+        country,
+        state,
+        city,
+        designation,
+        experience,
+        qualification,
+        specialization,
+        about,
+        profilePicture,
+        resume
+    });
+
+    // Save the new user to the database
+    newUser.save()
+        .then(() => {
+            res.json({ message: 'Profile added successfully' });
+        })
+        .catch(error => {
+            res.status(500).json({ error: 'Error adding profile' });
+        });
+});
+
 app.post('/register', (req, res) => {
     Users.create(req.body)
         .then((user) => res.json(user))

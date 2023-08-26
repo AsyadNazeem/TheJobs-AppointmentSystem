@@ -1,13 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios"; // Import Axios for making HTTP requests
 import TopBar from "../Consultent/ConsultantTopbar";
 import Sidebar from "../Consultent/ConsultantSidebar";
 
 export default function AddProfile() {
-    const [country, setCountry] = React.useState([]);
-    const [country_id, setCountry_id] = React.useState('');
-    const [state, setState] = React.useState([]);
-    const [state_id, setState_id] = React.useState('');
-    const [enable, setEnable] = React.useState(true);
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "",
+        country: "",
+        state: "",
+        city: "",
+        designation: "",
+        experience: "",
+        qualification: "",
+        specialization: "",
+        about: "",
+        profilePicture: null,
+        resume: null,
+    });
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleFileChange = (event) => {
+        const { name, files } = event.target;
+        setFormData({ ...formData, [name]: files[0] });
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const formDataWithFiles = new FormData();
+        for (const key in formData) {
+            formDataWithFiles.append(key, formData[key]);
+        }
+
+        axios.post("http://localhost:3005/addProfile", formDataWithFiles)
+            .then(response => {
+                console.log(response.data.message);
+                setFormData({
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    phoneNumber: "",
+                    country: "",
+                    state: "",
+                    city: "",
+                    designation: "",
+                    experience: "",
+                    qualification: "",
+                    specialization: "",
+                    about: "",
+                    profilePicture: null,
+                    resume: null,
+                });
+            })
+            .catch(error => {
+                console.error("Error adding profile", error);
+            });
+    };
 
     return (
         <div className="dash">
@@ -25,7 +80,7 @@ export default function AddProfile() {
                                 <div className="card mt-4">
                                     <div className="card-body">
                                         <h1 className="text-center m-5">Add Consultant Profile</h1>
-                                        <form className="row g-3">
+                                        <form className="row g-3" onSubmit={handleSubmit}>
                                             <div className="form-group col-md-3">
                                                 <label htmlFor="name">First Name</label>
                                                 <input type="text" className="form-control" id="name"
@@ -48,33 +103,18 @@ export default function AddProfile() {
                                             </div>
                                             <div className="form-group col-md-4">
                                                 <label htmlFor="name">Country</label>
-                                                <div className="container country-container">
-                                                    <span className="country" id="country"></span>
-                                                    <select className="form-select country" name="country" id="country">
-                                                        <option value="">Select Country</option>
-                                                        {country.map((item,index ) => (
-                                                            <option key={index} value={item.country_id}>{item.country_name}</option>
-                                                        ))}
-                                                    </select>
-                                                </div>
+                                                <input type="text" className="form-control" id="name"
+                                                       placeholder="Enter Country"/>
                                             </div>
                                             <div className="form-group col-md-4">
                                                 <label htmlFor="name">State</label>
-                                                <div className="container country-container">
-                                                    <span className="flag" id="flag"></span>
-                                                    <select className="countries form-select" name="countries" id="countries">
-                                                        <option value="">Select State</option>
-                                                    </select>
-                                                </div>
+                                                <input type="text" className="form-control" id="name"
+                                                       placeholder="Enter State"/>
                                             </div>
                                             <div className="form-group col-md-4">
                                                 <label htmlFor="name">City</label>
-                                                <div className="container country-container">
-                                                    <span className="flag" id="flag"></span>
-                                                    <select className="countries form-select" name="countries" id="countries">
-                                                        <option value="">Select City</option>
-                                                    </select>
-                                                </div>
+                                                <input type="text" className="form-control" id="name"
+                                                       placeholder="Enter City"/>
                                             </div>
                                             <div className="form-group col-md-3">
                                                 <label htmlFor="name">Designation</label>
@@ -103,13 +143,14 @@ export default function AddProfile() {
                                             </div>
                                             <div className="form-group">
                                                 <label htmlFor="name">Profile Picture</label>
-                                                <input type="file" className="form-control" id="name"
-                                                       placeholder="Enter Profile Picture"/>
+                                                <input type="file" name="profilePicture" onChange={handleFileChange} />
                                             </div>
                                             <div className="form-group">
                                                 <label htmlFor="name">Resume</label>
-                                                <input type="file" className="form-control" id="name"
-                                                       placeholder="Enter Resume"/>
+                                                <input type="file" name="resume" onChange={handleFileChange} />
+                                            </div>
+                                            <div>
+                                                <button type="submit">Add Profile</button>
                                             </div>
                                         </form>
                                     </div>

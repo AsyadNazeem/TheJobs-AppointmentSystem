@@ -84,3 +84,42 @@ export const DropDownData = [
     }
 ];
 
+export const JobProfileViewer = [
+    {
+        title: "Software Engineer",
+        description: "With supporting text below as a natural lead-in to additional content.",
+        expertise: "JAVA, PHP, C#, C++, REACT.JS, NODE.JS, EXPRESS.JS",
+    },
+    {
+        title: "Quality Assurance Engineer",
+        description: "With supporting text below as a natural lead-in to additional content.",
+        expertise: "JAVA, PHP, C#, C++, REACT.JS, NODE.JS, EXPRESS.JS",
+    },
+    {
+        title: "Project Manager",
+        description: "With supporting text below as a natural lead-in to additional content.",
+        expertise: "JAVA, PHP, C#, C++, REACT.JS, NODE.JS, EXPRESS.JS",
+    },
+    {
+        title: "Business Analyst",
+        description: "With supporting text below as a natural lead-in to additional content.",
+        expertise: "JAVA, PHP, C#, C++, REACT.JS, NODE.JS, EXPRESS.JS",
+    }
+]
+
+export const JobSeekerAppointmentDetails = [
+    {
+        Date: "Mon, 21st August",
+        Time: "08.00 PM SLST",
+        Description: "With supporting text below as a natural lead-in to additional content.",
+        AppointorName: "Nuwan Pradeep",
+        AppointorDesignation: "Software Engineer"
+    },
+    {
+        Date: "Mon, 21st August",
+        Time: "08.00 PM SLST",
+        Description: "With supporting text below as a natural lead-in to additional content.",
+        AppointorName: "Nuwan Pradeep",
+        AppointorDesignation: "Software Engineer"
+    },
+]

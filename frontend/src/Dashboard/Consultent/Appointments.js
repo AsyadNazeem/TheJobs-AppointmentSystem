@@ -2,6 +2,7 @@ import React from "react";
 import TopBar from "../Consultent/ConsultantTopbar";
 import Sidebar from "../Consultent/ConsultantSidebar";
 
+
 export default function ConsultantAppointments() {
     return (
         <div className="dash">
